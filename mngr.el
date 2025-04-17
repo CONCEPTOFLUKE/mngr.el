@@ -1,4 +1,4 @@
-;; mngr
+;; mngr.el --- Functions for the mngr project management syntax -*- lexical-binding: t; -*-
 
 (defvar mngr--date-only-format "%Y%m%d"
   "The format for mngr Dates. Being `YYYYMMDD'.")
@@ -172,3 +172,6 @@ Each snippet includes client, project metadata, task, and other details for ever
 
 
 
+(provide 'mngr)
+
+;;; mngr.el ends here
