@@ -1,5 +1,7 @@
 ;; mngr.el --- Functions for the mngr project management syntax -*- lexical-binding: t; -*-
 
+(require 'cl-lib)
+
 (defvar mngr--date-only-format "%Y%m%d"
   "The format for mngr Dates. Being `YYYYMMDD'.")
 
