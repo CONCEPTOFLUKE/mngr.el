@@ -1,8 +1,5 @@
 ;; mngr.el --- Functions for the mngr project management syntax -*- lexical-binding: t; -*-
 
-(require 'cl) ; not recommended but I need my FIRST SECOND THRID....
-(require 'cl-lib)
-
 (defvar mngr--date-only-format "%Y%m%d"
   "The format for mngr Dates. Being `YYYYMMDD'.")
 
@@ -105,11 +102,11 @@ Each snippet includes client, project metadata, task, and other details for ever
 
 (defun mngr--format-overview-string (data)
   "Formats and returns an overview string"
-  (let ((client (first data))
-	(contract-client (when (string-match "&[^ \t\n]+" (second data))
-			   (match-string 0 (second data))))
-	(project (third data))
-	(task (fourth data))
+  (let ((client (car data))
+	(contract-client (when (string-match "&[^ \t\n]+" (cadr data))
+			   (match-string 0 (cadr data))))
+	(project (caddr data))
+	(task (cadddr data))
 	(estimate (when (string-match "<[^ \t\n]+" (car (last data)))
 		    (match-string 0 (car (last data)))))
 	(time (when (string-match "@[0-9]\\{8\\}-\\([0-9]\\{4\\}\\)\\b" (car (last data)))
