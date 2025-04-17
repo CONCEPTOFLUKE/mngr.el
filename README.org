@@ -1,0 +1,3 @@
+* mngr-mode
+
+A bare minimum set of utilities to trial the mngr syntax system.
