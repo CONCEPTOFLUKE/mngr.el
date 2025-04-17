@@ -1,5 +1,6 @@
 ;; mngr.el --- Functions for the mngr project management syntax -*- lexical-binding: t; -*-
 
+(require 'cl) ; not recommended but I need my FIRST SECOND THRID....
 (require 'cl-lib)
 
 (defvar mngr--date-only-format "%Y%m%d"
